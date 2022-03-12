@@ -1,5 +1,6 @@
 ####Use this code to give vehicle key to ped when spawn their vehicle
-> ESX.Game.SpawnVehicle(vehicle.model, {
+```javascript
+ ESX.Game.SpawnVehicle(vehicle.model, {
                     x = SpawnCoords.x,
                     y = SpawnCoords.y,
                     z = SpawnCoords.z
@@ -9,10 +10,12 @@
                     SetVehicleHasBeenOwnedByPlayer(callback_vehicle, true)
                     SetVehicleEngineHealth(callback_vehicle, vehicle.engineHealth + 0.0)
                     table.insert(ListVehilce, callback_vehicle)
-                   ** INSERT THIS CODE** --> `exports['kingwolf-vehiclekeys']:SetVehicleKey(GetVehicleNumberPlateText(callback_vehicle), true)
-                end)`
+                    INSERT THIS LINE --> 
+					exports['kingwolf-vehiclekeys']:SetVehicleKey(GetVehicleNumberPlateText(callback_vehicle), true)
+                end)
+				
 				end)
-
+```
 ###### Remember the variable callback_vehicle you inserted must be your callback variable, in my example that is callback_vehicle
 
 #### If you want to turn off vehicle if PED doesn't have key of vehicle, you just uncomment that code:If you want to turn off vehicle if PED doesn't have key of vehicle, you just uncomment that code:
